@@ -12,6 +12,9 @@ import { GlobalStyle } from './global.styles';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
+import shopData from './redux/shop/shop.data';
+import { addCollectionAndDocuments } from './firebase/firebase.utils';
+
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUpPage = lazy(() =>
@@ -19,11 +22,13 @@ const SignInAndSignUpPage = lazy(() =>
 );
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
-const App = ({ checkUserSession, currentUser }) => {
+const App = ({ checkUserSession, currentUser}) => {
   useEffect(() => {
     checkUserSession();
   }, [checkUserSession]);
 
+  //addCollectionAndDocuments('collections', shopData);
+  
   return (
     <div>
       <GlobalStyle />
@@ -49,11 +54,13 @@ const App = ({ checkUserSession, currentUser }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+ 
 });
 
 const mapDispatchToProps = dispatch => ({
   checkUserSession: () => dispatch(checkUserSession())
+  //addCollectionAndDocuments: dispatch(addCollectionAndDocuments())
 });
 
 export default connect(

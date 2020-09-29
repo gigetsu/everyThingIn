@@ -3,13 +3,22 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
-  authDomain: 'crwn-db.firebaseapp.com',
-  databaseURL: 'https://crwn-db.firebaseio.com',
-  projectId: 'crwn-db',
-  storageBucket: 'crwn-db.appspot.com',
-  messagingSenderId: '850995411664',
-  appId: '1:850995411664:web:7ddc01d597846f65'
+  // apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
+  // authDomain: 'crwn-db.firebaseapp.com',
+  // databaseURL: 'https://crwn-db.firebaseio.com',
+  // projectId: 'crwn-db',
+  // storageBucket: 'crwn-db.appspot.com',
+  // messagingSenderId: '850995411664',
+  // appId: '1:850995411664:web:7ddc01d597846f65'
+
+  apiKey: "AIzaSyBGofBJ4HjAIzZiJL209VyPDva52ZUaQM4",
+  authDomain: "crwn-e4d18.firebaseapp.com",
+  databaseURL: "https://crwn-e4d18.firebaseio.com",
+  projectId: "crwn-e4d18",
+  storageBucket: "crwn-e4d18.appspot.com",
+  messagingSenderId: "369718003658",
+  appId: "1:369718003658:web:9195cb925a127a8063f133",
+  measurementId: "G-YY85G3FKB1"
 };
 
 firebase.initializeApp(config);
@@ -43,10 +52,14 @@ export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
 ) => {
+  console.log(`objectsToAdd is  ${JSON.stringify(objectsToAdd)}`);
+  var objectArr = [];
+  objectArr =  objectsToAdd ? Object.keys(objectsToAdd).map(key => objectsToAdd[key]) : []
+
   const collectionRef = firestore.collection(collectionKey);
 
   const batch = firestore.batch();
-  objectsToAdd.forEach(obj => {
+  objectArr.forEach(obj => {
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
   });
