@@ -11,14 +11,23 @@ const config = {
   // messagingSenderId: '850995411664',
   // appId: '1:850995411664:web:7ddc01d597846f65'
 
-  apiKey: "AIzaSyBGofBJ4HjAIzZiJL209VyPDva52ZUaQM4",
-  authDomain: "crwn-e4d18.firebaseapp.com",
-  databaseURL: "https://crwn-e4d18.firebaseio.com",
-  projectId: "crwn-e4d18",
-  storageBucket: "crwn-e4d18.appspot.com",
-  messagingSenderId: "369718003658",
-  appId: "1:369718003658:web:9195cb925a127a8063f133",
-  measurementId: "G-YY85G3FKB1"
+ // apiKey: "AIzaSyBGofBJ4HjAIzZiJL209VyPDva52ZUaQM4",
+ // authDomain: "crwn-e4d18.firebaseapp.com",
+ // databaseURL: "https://crwn-e4d18.firebaseio.com",
+ // projectId: "crwn-e4d18",
+ // storageBucket: "crwn-e4d18.appspot.com",
+ // messagingSenderId: "369718003658",
+ // appId: "1:369718003658:web:9195cb925a127a8063f133",
+ // measurementId: "G-YY85G3FKB1"
+
+ apiKey: "AIzaSyB5DhSEUOCmTM0Y8jdk2rbgrJoGkChTC_M",
+ authDomain: "giproject-e53e8.firebaseapp.com",
+ databaseURL: "https://giproject-e53e8.firebaseio.com",
+ projectId: "giproject-e53e8",
+ storageBucket: "giproject-e53e8.appspot.com",
+ messagingSenderId: "486152885702",
+ appId: "1:486152885702:web:894713658b8aee71708ec7",
+ measurementId: "G-54JNRNXDDR"
 };
 
 firebase.initializeApp(config);
@@ -52,6 +61,7 @@ export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
 ) => {
+  debugger;
   console.log(`objectsToAdd is  ${JSON.stringify(objectsToAdd)}`);
   var objectArr = [];
   objectArr =  objectsToAdd ? Object.keys(objectsToAdd).map(key => objectsToAdd[key]) : []

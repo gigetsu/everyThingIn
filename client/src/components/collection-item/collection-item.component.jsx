@@ -13,7 +13,7 @@ import {
 } from './collection-item.styles';
 
 export const CollectionItem = ({ item, addItem }) => {
-  const { name, price, imageUrl } = item;
+  const { name, price, imageUrl} = item;
 
   return (
     <CollectionItemContainer>

@@ -14,6 +14,7 @@ import { checkUserSession } from './redux/user/user.actions';
 
 import shopData from './redux/shop/shop.data';
 import { addCollectionAndDocuments } from './firebase/firebase.utils';
+import Details from './components/details/details.component';
 
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
@@ -27,18 +28,20 @@ const App = ({ checkUserSession, currentUser}) => {
     checkUserSession();
   }, [checkUserSession]);
 
-  //addCollectionAndDocuments('collections', shopData);
+  addCollectionAndDocuments('collections', shopData);
   
   return (
     <div>
       <GlobalStyle />
       <Header />
+      
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
             <Route exact path='/' component={HomePage} />
             <Route path='/shop' component={ShopPage} />
             <Route exact path='/checkout' component={CheckoutPage} />
+            <Route  path='/details/:id' component={Details} />
             <Route
               exact
               path='/signin'

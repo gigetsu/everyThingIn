@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const HomePageContainer = styled.div`
+export const SliderItemsContainer = styled.div`
+  width: 380px;
   display: flex;
   flex-direction: column;
-  
 `;
