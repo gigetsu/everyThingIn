@@ -1,21 +1,29 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { Router, browserHistory } from 'react-router';
 import { selectSliders } from '../../redux/sliderItems/sliderItems.selectors'
 import { connect } from 'react-redux';
+import {
+    DetailsContainer,
+    ImgContainer,
+    TextContainer
+} from './details.styles'
 
-export const Details = ({ items}) => {
+export const Details = ({ item }) => {
     return (
-<div>
-        <h>{items[0].id}</h>
-        </div>   
-             
-        );
-      };
-const mapStateToProps = (state, ownProps) => ({
-    items: selectSliders(ownProps.match.params.id)(state)
-});
+        <DetailsContainer>
+            <ImgContainer>
+                <img src={item.imageUrl} />
+            </ImgContainer>
+            <TextContainer>
+                <span>Name: {item.name}</span><br></br>
+                <span>Size: {item.size}</span><br></br>
+                <span>Price: ${item.price}</span>
+            </TextContainer>
+        </DetailsContainer>
 
+    );
+};
+const mapStateToProps = (state, ownProps) => ({
+    item: selectSliders(ownProps.match.params.id)(state)[0]
+});
 
 export default connect(mapStateToProps)(Details);

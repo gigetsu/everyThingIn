@@ -14,7 +14,7 @@ const mapStateToProps = createStructuredSelector({
   items: sliderItems
 });
 
-export const SliderItems = ({ items}) => ({
+export const SliderItems = ({ items }) => ({
 
   render() {
 
@@ -23,7 +23,7 @@ export const SliderItems = ({ items}) => ({
       arrows: true,
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 5,
       slidesToScroll: 1,
       prevArrow: true,
       nextArrow: true,
@@ -52,12 +52,12 @@ export const SliderItems = ({ items}) => ({
         />
       );
     }
-    
+
 
     return (<Slider {...settings}>
-      {items.map(( item) => (
-    <SliderItem key={item.id} {...item}/>
-  ))}
+      {items.map((item) => (
+        <SliderItem key={item.id} {...item} />
+      ))}
     </Slider>)
   }
 });

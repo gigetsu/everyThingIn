@@ -61,7 +61,6 @@ export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
 ) => {
-  debugger;
   console.log(`objectsToAdd is  ${JSON.stringify(objectsToAdd)}`);
   var objectArr = [];
   objectArr =  objectsToAdd ? Object.keys(objectsToAdd).map(key => objectsToAdd[key]) : []

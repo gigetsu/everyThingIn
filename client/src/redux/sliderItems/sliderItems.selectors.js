@@ -9,7 +9,7 @@ export const sliderItems = createSelector(
 
 export const selectSliders = idParam =>
   createSelector(
-    [selectSlider],
-    slider => slider.items.filter(item => item.id == idParam)
+    [sliderItems],
+    sliders => sliders.filter(item => item.id == idParam)
   );
 
