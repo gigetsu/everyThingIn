@@ -7,7 +7,7 @@ export const SliderItem = ({
     id, name, price, imageUrl, history, dispatch,
     match
 }) => (
-    <a onClick={() => history.push(`/details/${id}`)}>
+        <a onClick={() => history.push(`/details/${id}`)}>
             <img src={imageUrl} />
         </a>
 
