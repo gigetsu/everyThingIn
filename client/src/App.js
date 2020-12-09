@@ -6,13 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
-
+import { fetchCollectionsStart } from './redux/shop/shop.actions';
 import { GlobalStyle } from './global.styles';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
-import shopData from './redux/shop/shop.data';
 import { addCollectionAndDocuments } from './firebase/firebase.utils';
 import Details from './components/details/details.component';
 
@@ -23,12 +22,13 @@ const SignInAndSignUpPage = lazy(() =>
 );
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
-const App = ({ checkUserSession, currentUser}) => {
+const App = ({ checkUserSession, fetchCollectionsStart, currentUser}) => {
   useEffect(() => {
     checkUserSession();
-  }, [checkUserSession]);
+    fetchCollectionsStart();
+  }, [checkUserSession],[fetchCollectionsStart]);
 
-  addCollectionAndDocuments('collections', shopData);
+  // addCollectionAndDocuments('collections', shopData);
   
   return (
     <div>
@@ -62,9 +62,12 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = dispatch => ({
-  checkUserSession: () => dispatch(checkUserSession())
+  checkUserSession: () => dispatch(checkUserSession()),
+  fetchCollectionsStart: () => dispatch(fetchCollectionsStart())
   //addCollectionAndDocuments: dispatch(addCollectionAndDocuments())
 });
+
+
 
 export default connect(
   mapStateToProps,
