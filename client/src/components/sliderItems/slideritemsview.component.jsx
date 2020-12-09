@@ -4,20 +4,19 @@ import { createStructuredSelector } from 'reselect';
 
 import SliderItemsPage from './slideritemspage.component';
 
-import { selectCollections } from '../../redux/shop/shop.selectors';
-import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
-//import { selectCollectionsForSlider } from '../../redux/shop/shop.selectors';
+import { selectItems } from '../../redux/shop/shop.selectors';
 
-export const SliderItemsView = ({ collections }) => (
-    <div>
-        {collections.map(({ id, ...otherCollectionProps }) => (
-            <SliderItemsPage key={id} {...otherCollectionProps} />
-        ))}
-    </div>
-);
+export const SliderItemsView = ({ items }) => {
+    console.log("@@@@@@@@@@@@@@@@@@@@@@" +items );
+    return (
+        <div>      
+            <SliderItemsPage key= {items.id} items= {items}/>         
+          </div>
+    )
+        };
 
 const mapStateToProps = createStructuredSelector({
-    collections:  selectCollectionsForPreview
+  items: selectItems
 });
 
 export default connect(mapStateToProps)(SliderItemsView);

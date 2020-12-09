@@ -6,7 +6,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export const SliderItemsPage = ({ items }) => ({
+export const SliderItemsPage = ({ items }) => {
+    console.log("########################"+ items)
+return {
 
     render() {
 
@@ -47,13 +49,12 @@ export const SliderItemsPage = ({ items }) => ({
     
         return (<Slider {...settings}>
          {items
-        .filter((item, idx) => idx < 4)
         .map(item => (
           <SliderItem key={item.id} item={item} />
         ))}
         </Slider>)
       }
-}
-    );
+}}
+    ;
 
 export default withRouter(SliderItemsPage);
