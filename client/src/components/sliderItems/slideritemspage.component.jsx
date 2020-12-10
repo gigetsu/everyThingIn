@@ -7,10 +7,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export const SliderItemsPage = ({ items }) => {
-    console.log("########################"+ items)
-return {
-
-    render() {
 
         const settings = {
           dots: true,
@@ -50,11 +46,9 @@ return {
         return (<Slider {...settings}>
          {items
         .map(item => (
-          <SliderItem key={item.id} item={item} />
+          <SliderItem key={item.id} {...item} />
         ))}
         </Slider>)
-      }
-}}
-    ;
+      };
 
 export default withRouter(SliderItemsPage);

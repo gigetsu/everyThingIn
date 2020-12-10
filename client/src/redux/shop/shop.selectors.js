@@ -15,19 +15,34 @@ export const selectCollectionsForPreview = createSelector(
 
 export const selectItems = createSelector(
   [selectCollectionsForPreview],
-  collections => 
-  collections.map(collection => collection.items)
+  collections =>
+    collections.map(collection => collection.items)
 );
 
-export const selectSliderItems = createSelector(
+export const sortSliderItems = createSelector(
   [selectItems],
-  selectItems => selectItems.sort((a, b) => {
-    if (a['price'] < b['price']) return -1;
-    if (a['price'] > b['price']) return 1;
-    return 0;
-  })
+  selectItems => {
+    var sortedItems = [];
+    var tempItems = [];
+    selectItems.map(
+      items => {
+        tempItems = items.sort(
+          function (a, b) {
+            return b.price - a.price;
+          }
+        ).slice(0, 3)
+        sortedItems.push(...tempItems)
+      }
+    )
+    return sortedItems;
+  }
 );
 
+export const selectItemById = idParam =>
+  createSelector(
+    [sortSliderItems],
+    sortSliderItems => sortSliderItems.filter(item => item.id == idParam)
+  );
 
 export const selectCollection = collectionUrlParam =>
   createSelector(

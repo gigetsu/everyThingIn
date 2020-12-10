@@ -22,3 +22,25 @@
 [1207/170821.788:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\wangy\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\c04f02b8-b8f9-4009-886b-61535ff1c0fe: 指定されたパスが見つかりません。 (0x3)
 [1207/170821.788:ERROR:directory_reader_win.cc(43)] FindFirstFile: 指定されたパスが見つかりません。 (0x3)
 [1209/211254.524:ERROR:directory_reader_win.cc(43)] FindFirstFile: 指定されたパスが見つかりません。 (0x3)
+[1210/004338.400:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.400:ERROR:exception_snapshot_win.cc(99)] thread ID 15508 not found in process
+[1210/004338.415:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 18180 not found in process
+[1210/004338.415:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 5636 not found in process
+[1210/004338.415:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 16488 not found in process
+[1210/004338.400:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 19208 not found in process
+[1210/004338.400:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 14968 not found in process
+[1210/004338.415:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 19692 not found in process
+[1210/004338.415:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.400:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 19364 not found in process
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 9964 not found in process
+[1210/004338.415:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.415:ERROR:exception_snapshot_win.cc(99)] thread ID 16628 not found in process
+[1210/004338.431:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[1210/004338.431:ERROR:exception_snapshot_win.cc(99)] thread ID 11432 not found in process

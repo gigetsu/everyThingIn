@@ -14,6 +14,7 @@ import { checkUserSession } from './redux/user/user.actions';
 
 import { addCollectionAndDocuments } from './firebase/firebase.utils';
 import Details from './components/details/details.component';
+import shopData from './redux/shop/shop.data';
 
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
