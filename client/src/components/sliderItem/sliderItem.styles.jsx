@@ -5,3 +5,9 @@ export const SliderItemContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const SliderImgContainer = styled.img`
+  margin: auto;
+`;
+
+SliderImgContainer.displayName = 'SliderImgContainer';

@@ -1,11 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-
+import {SliderImgContainer} from './sliderItem.styles'
 export const SliderItem = ({
     id, imageUrl, history
 }) => (
         <a onClick={() => history.push(`/details/${id}`)}>
-            <img src={imageUrl} />
+            <SliderImgContainer src={imageUrl} />
         </a>
 
     );

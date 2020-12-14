@@ -29,7 +29,7 @@ const App = ({ checkUserSession, fetchCollectionsStart, currentUser}) => {
     fetchCollectionsStart();
   }, [checkUserSession],[fetchCollectionsStart]);
 
-  // addCollectionAndDocuments('collections', shopData);
+ //addCollectionAndDocuments('collections', shopData);
   
   return (
     <div>

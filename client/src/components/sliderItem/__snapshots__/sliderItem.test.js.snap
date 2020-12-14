@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderItem component should render SliderItem component 1`] = `ShallowWrapper {}`;
