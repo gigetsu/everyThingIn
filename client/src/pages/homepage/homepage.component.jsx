@@ -1,16 +1,21 @@
-import React , { useEffect, lazy, Suspense }from 'react';
-
+import React, { useEffect, lazy, Suspense } from 'react';
+import { connect } from 'react-redux';
+import SliderItemsView from '../../components/sliderItems/slideritemsview.component';
 import Directory from '../../components/directory/directory.component';
 import { HomePageContainer } from './homepage.styles';
-import SliderItems from '../../components/sliderItems/slideritemsContainer';
-const SliderItemsContainer = lazy(() =>
-  import('../../components/sliderItems/slideritemsContainer')
-);
-const HomePage = () => (
-  <HomePageContainer>
-    <SliderItemsContainer />
-    <Directory /> 
-  </HomePageContainer>
-);
+const HomePage = ({ isFetching }) => {
+  if (isFetching)
+    return null;
+  else
+    return (
+      <HomePageContainer>
+        < SliderItemsView />
+        <Directory />
+      </HomePageContainer>
+    )
+};
+const mapStateToProps = (state) => ({
+    isFetching : state.shop.isFetching
+  });
 
-export default HomePage;
+export default connect(mapStateToProps,null)(HomePage);

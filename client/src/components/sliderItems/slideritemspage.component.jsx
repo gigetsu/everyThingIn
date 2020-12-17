@@ -46,7 +46,7 @@ export const SliderItemsPage = ({ items }) => {
         return (<Slider {...settings}>
          {items
         .map(item => (
-          <SliderItem key={item.id} {...item} />
+          <SliderItem key={item.id} item={item} />
         ))}
         </Slider>)
       };

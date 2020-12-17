@@ -15,7 +15,8 @@ import { checkUserSession } from './redux/user/user.actions';
 import { addCollectionAndDocuments } from './firebase/firebase.utils';
 import Details from './components/details/details.component';
 import shopData from './redux/shop/shop.data';
-
+//import SliderItemsView from './components/sliderItems/slideritemsview.component'
+//const SliderItemsView = lazy(() => import('./components/sliderItems/slideritemsview.component'));
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUpPage = lazy(() =>
@@ -35,7 +36,6 @@ const App = ({ checkUserSession, fetchCollectionsStart, currentUser}) => {
     <div>
       <GlobalStyle />
       <Header />
-      
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>

@@ -6,15 +6,11 @@ import SliderItemsPage from './slideritemspage.component';
 
 import { sortSliderItems } from '../../redux/shop/shop.selectors';
 
-export const SliderItemsView = ({ items }) => {
-  console.log();
-  console.log();
-  return (
-    <div>
+export const SliderItemsView = ({ items }) => (
+    
     <SliderItemsPage items= {items}/> 
-    </div>        
-    )
-}       
+         
+    );      
 
 const mapStateToProps = createStructuredSelector({
   items: sortSliderItems
