@@ -1,13 +1,19 @@
-import DetailitemActionTypes from './detailitem.types';
+import DetailActionTypes from './detailitem.types';
 
 const INITIAL_STATE = {
 };
 
 const detailitemReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case DetailitemActionTypes.CHANGE_BCK_IMG:
+    case DetailActionTypes.CHANGE_BCK_IMG:
       return {
         ...state,
+        detailitem: action.payload
+      };
+    case DetailActionTypes.SET_IMG:
+      return {
+        ...state,
+        detailitem: action.payload
       };
     default:
       return state;

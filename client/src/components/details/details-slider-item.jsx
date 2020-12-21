@@ -4,18 +4,18 @@ import { withRouter } from 'react-router-dom';
 import { changebckImg } from '../../redux/detailitem/detailitem.action';
 import {
     SliderImgContainer,
-    ImgContainer,
 } from './details.styles'
 export const DetailsSliderItem = ({
-    id, imageUrl, history, item, backgroundImg, dispatch, changebckImg
+    imageUrl, item, changebckImg
 }) => {
-
+    
     return (<SliderImgContainer src={imageUrl} item={item} 
-        onClick={() => changebckImg()}/>)
+        onClick={() => {changebckImg(imageUrl);}}
+        />)
 };
 
 const mapDispatchToProps = dispatch => ({
-    changebckImg: () => dispatch(changebckImg())
+    changebckImg: imageUrl => dispatch(changebckImg(imageUrl))
   });
 
 export default withRouter(connect(

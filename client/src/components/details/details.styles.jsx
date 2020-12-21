@@ -215,7 +215,7 @@ overflow-x: hidden;
 
 ServiceText.displayName = 'ServiceText';
 
-export const dlStyle = styled.div`
+export const DlStyle = styled.div`
 display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -225,16 +225,16 @@ display: block;
 
 `;
 
-dlStyle.displayName = 'dlStyle';
+DlStyle.displayName = 'DlStyle';
 
-export const dtStyle = styled.div`
+export const DtStyle = styled.div`
 float: left;
     clear: left;
     padding: 10px 0;
 
 `;
 
-dtStyle.displayName = 'dtStyle';
+DtStyle.displayName = 'DtStyle';
 
 
 export const IconContainer = styled.img`
