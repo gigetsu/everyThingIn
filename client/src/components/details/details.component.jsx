@@ -92,7 +92,7 @@ export const Details = ({ item, addItem }) => {
                 </TextContainer>
 
                 <SlidersContainer>
-                    <DetailsSliders items={item.detailsImage} />
+                    <DetailsSliders items={item.detailsImage} backgroundImg={item.imageUrl}/>
                 </SlidersContainer>
                 <div>
                     <IconContainer src='https://i.ibb.co/V2KmrQC/3.jpg' />

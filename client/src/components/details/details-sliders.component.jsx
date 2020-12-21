@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export const DetailsSliders = ({ items }) => {
+export const DetailsSliders = ({ items, backgroundImg }) => {
 
         const settings = {
           dots: true,
@@ -46,7 +46,7 @@ export const DetailsSliders = ({ items }) => {
         return (<Slider {...settings}>
          {items
         .map(item => (
-          <DetailsSliderItem key={item.id} {...item} />
+          <DetailsSliderItem backgroundImg={backgroundImg} key={item.id} {...item} />
         ))}
         </Slider>)
       };
